@@ -1,0 +1,215 @@
+body{
+	margin: 0;
+}
+ul{
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+button{
+	border: 1px solid #979797;
+	font size: 18px;
+	color font: #333;
+	letter-spacing: 2px;
+	line-height: 23px;
+}
+.dashRed{
+	border: 3px solid #C41230;
+	width: 50px;
+	margin: 0 auto;
+}
+.dashLight{
+	border: 1px solid #888;
+	width: 40px;
+	margin: 0 auto;
+}
+/************************ HEADER *********************************/
+header{
+	background-image: url(img/diwanee-cover.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 60vh;
+}
+/*********************** NAVIGATION ******************************/
+nav{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 13px;
+	color: #333333;
+	letter-spacing: 4px;
+	padding-top: 40px;
+}
+nav img{
+	margin-left: 15%;
+}
+nav ul{
+	margin: 0;
+	float: right;
+	margin-right: 15%;
+}
+nav ul li{
+	display: inline-block;
+	padding-top: 10px;
+	margin-left: 40px;
+}
+/************************ HERO ***********************************/
+#hero{
+	text-align: center;
+	position: relative;
+	top: 40%;
+	transform: translateY(-50%);
+}
+#hero h1{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 120px;
+	color: #333;
+	letter-spacing: 1px;
+	margin: 0 0 20px 0;
+}
+#hero p{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 30px;
+	color: #333;
+	letter-spacing: 1px;
+	line-height: 40px;
+	width: 50%;
+	margin: 60px auto 0;
+}
+/*********************** FIRST SECTION ***************************/
+#firstBelowTheFold{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+#firstBelowTheFold ul{
+	display: flex;
+	justify-content: center;
+	margin: 0;
+}
+#firstBelowTheFold ul li{
+	display: inline-block;
+	width: 33%;
+	text-align: center;
+	vertical-align: top;
+	padding: 150px 30px 80px;
+	background-color: rgb(251, 251, 251);
+}
+#firstBelowTheFold ul li:nth-of-type(1){
+	background-image: url(img/triangle-white.png);
+	background-repeat: no-repeat;
+	background-size: 60%;
+	background-position: -200px center;
+}
+#firstBelowTheFold ul li:nth-of-type(2){
+	background-color: rgb(237, 237, 237);
+}
+#firstBelowTheFold ul li:nth-of-type(3){
+	background-image: url(img/square-white.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: 250px 100px;
+}
+#firstBelowTheFold h3{
+	font-size: 24px; 
+	color: #333333;
+	letter-spacing: 4px;
+	line-height: 30px;
+}
+/************************* POSLOVI *******************************/
+.jobsTitle{
+	text-align: center;
+}
+.jobsTitle h2{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 60px;
+	color: #333;
+	letter-spacing: 3px;
+	line-height: 75px;
+}
+.jobsTitle p{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 36px;
+	color: #333333;
+	line-height: 50px;
+}
+.pozicije h3{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+	font-size: 28px;
+	color: #333333;
+	letter-spacing: 2.33px;
+	line-height: 36px;
+}
+.pozicije p{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 24px;
+	color: #888;
+	line-height: 34px;
+}
+.pozicije button{
+	clear: both;
+	float: right;
+}
+.pozicije ul li{
+	display: inline-block;
+}
+.pozicije ul li p{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	color: #C41230;
+	letter-spacing: 2px;
+	border: 1px solid #979797;
+	padding: 0 20px;
+}
+#ucitajJos{
+	margin: 0 auto;
+	display: block;
+}
+/***************************** O NAMA ******************************/
+#oNama{
+	text-align: center;
+}
+#oNama h2{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 60px;
+	color: #333;
+	letter-spacing: 3px;
+	line-height: 75px;
+}
+#oNama p{
+	text-align: justify;
+}
+/****************************** FOOTER **************************/
+footer{
+	background-color: #2D2D2D;
+}
+footer ul{
+	display: flex;
+	justify-content: space-around;
+}
+footer ul li{
+	display: inline-block;
+	vertical-align: top;
+}
+footer h4{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 18px;
+	color: #FFFFFF;
+	letter-spacing: 2px;
+}
+footer h4::before{
+	content: url(img/place-pin-ico.png);
+}
+footer p{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	font-size: 18px;
+	color: #9B9B9B;
+	line-height: 28px;
+}
+#copywrite{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	font-size: 12px;
+	color: #5B5B5B;
+	letter-spacing: 2px;
+}
