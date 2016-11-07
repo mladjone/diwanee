@@ -15,6 +15,8 @@
 
     <!-- font awesome icons -->
     <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css">
+    <!-- load jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   </head>
 
   <body>
@@ -22,7 +24,7 @@
     <header>
       <nav>
         <img src="img/diwanee-logo.png">
-        <ul>
+        <ul class="primaryNavigation">
           <li>
             <a href="#oNama">O NAMA</a>
           </li>
@@ -33,11 +35,44 @@
             <a href="#kontakt">KONTAKT</a>
           </li>
         </ul>
+
+        <aside id="mobileNavOpen">
+          <i id="openMenu" class="fa fa-bars" aria-hidden="true"></i>
+        </aside>
+
+        <nav class="mobileNavigation">
+          <aside id="mobileNavClose">
+              <i id="closeMenu" class="fa fa-times" aria-hidden="true"></i>
+          </aside>
+          <ul>
+              <li>
+                <a href="#oNama">O NAMA</a>
+              </li>
+              <li>
+                <a href="#poslovi">POSLOVI</a>
+              </li>
+              <li>
+                <a href="#kontakt">KONTAKT</a>
+              </li>
+              <li class="socialMobile">
+                <p>PRATITE NAS</p>
+                <a href="https://www.facebook.com/diwaneeserbia/">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="https://twitter.com/diwaneeserbia">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+
+              </li>
+          </ul>
+        </nav>
+
       </nav>
       <div id="hero">
         <h1>DIWANEE SERBIA</h1>
         <div class="dashRed"></div>
-        <p>Digital Media Agency always looking for motivated, multi-talented, and organized people to join our diverse team.</p>
+        <p class="desktopSubTitle">Digital Media Agency always looking for motivated, multi-talented, and organized people to join our diverse team.</p>
+        <p class="mobileSubTitle">DIGITAL MEDIA AGENCY</p>
       </div>
     </header>
     
@@ -66,14 +101,14 @@
 
     <div id="poslovi">
       <section class="jobsTitle">
-        <h6>OTVORENE POZICIJE</h6>
+        <h6 class="subTitle">OTVORENE POZICIJE</h6>
         <H2>POSLOVI</H2>
         <div class="dashRed"></div>
         <P>We are always looking for motivated, multi-talented, and organized people to join our diverse team.</P>
       </section>
       <div class="pozicije">
         <h3>FRONT-END DEVELOPER</h3>
-        <button id="apply">PRIJAVI SE</button>
+        <button class="apply">PRIJAVI SE</button>
         <P>Trazimo front-end developera sa odlicnim poznavanjem i iskustvom vise od godinu dana u Drupalu.</P>
         <ul>
           <li>
@@ -89,7 +124,7 @@
       </div>
       <div class="pozicije">
         <h3>PROJECT-MANAGER</h3>
-        <button id="apply">PRIJAVI SE</button>
+        <button class="apply">PRIJAVI SE</button>
         <P>Trazimo front-end developera sa odlicnim poznavanjem i iskustvom vise od godinu dana u Drupalu.</P>
         <ul>
           <li>
@@ -105,7 +140,7 @@
       </div>
       <div class="pozicije">
         <h3>UX-DESIGNER</h3>
-        <button id="apply">PRIJAVI SE</button>
+        <button class="apply">PRIJAVI SE</button>
         <P>Trazimo front-end developera sa odlicnim poznavanjem i iskustvom vise od godinu dana u Drupalu.</P>
         <ul>
           <li>
@@ -123,12 +158,14 @@
     </div>
 
     <div id="oNama">
-      <h6>DIWANEE BEOGRAD</h6>
+      <h6 class="subTitle">DIWANEE BEOGRAD</h6>
       <h2>DIGITAL MEDIA COMPANY</h2>
       <div class="dashRed"></div>
       <p>Diwanee je digitalna medijska kompanija, okrenuta velikoj ženskoj publici na Bliskom istoku. Naša kompanija stvara i distribuira originalan, visokokvalitetan i pouzdan sadržaj. Diwanee je takođe partner sa YouTube-om, i zajedno smo pokrenuli kanal "DUINIATI", nudeći na taj način sve vrste bogatog video sadržaja za arapske žene širom sveta.</p>
       <p>Radimo sa velikim brojem brendova radi povećanja angažovanja, a sve u digitalnom prostoru. Diwanee je partner i sa velikim regionalnim vlasnicima medija, kako bismo upravljali svojom digitalnom prisutnošću.</p>
-      <h6>PRATITE NAS</h6>
+    </div>
+    <div id="social">
+      <h6 class="subTitle">PRATITE NAS</h6>
       <a href="https://twitter.com/diwaneeserbia">
         <img src="img/twitt.png">
       </a>
@@ -137,7 +174,7 @@
       </a>
     </div>
 
-    <footer>
+    <footer id="kontakt">
       <ul>
         <li>
           <h4> DUBAI</h4>
@@ -161,7 +198,6 @@
         </li>
       </ul>
       <div id="copywrite">
-        <p>COPYWRIGHT   &copy; 2015 DIWANEE SERBIA ALL RIGHTS RESERVED</p>
         <ul>
           <li>
             <a href="https://www.linkedin.com/company/diwanee">
@@ -177,6 +213,7 @@
             <a href="http://corp.diwanee.com/">www.diwanee.com</a>
           </li>
         </ul>
+        <p>COPYWRIGHT   &copy; 2015 DIWANEE SERBIA <span>ALL RIGHTS RESERVED<span></p>
       </div>
     </footer>
 

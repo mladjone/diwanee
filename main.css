@@ -6,13 +6,17 @@ ul{
 }
 a{
 	text-decoration: none;
+	color: black;
 }
 button{
 	border: 1px solid #979797;
-	font size: 18px;
-	color font: #333;
+	font-size: 18px;
+	color: #333;
 	letter-spacing: 2px;
 	line-height: 23px;
+	background-color: transparent;
+	padding: 10px 20px;
+	cursor: pointer;
 }
 .dashRed{
 	border: 3px solid #C41230;
@@ -24,13 +28,21 @@ button{
 	width: 40px;
 	margin: 0 auto;
 }
+.subTitle{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	font-size: 14px;
+	letter-spacing: 4px;
+	color: #888;
+	margin: 30px;
+}
 /************************ HEADER *********************************/
 header{
 	background-image: url(img/diwanee-cover.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 60vh;
+	height: 80vh;
 }
 /*********************** NAVIGATION ******************************/
 nav{
@@ -53,6 +65,66 @@ nav ul li{
 	padding-top: 10px;
 	margin-left: 40px;
 }
+#mobileNavOpen{
+    background-color: transparent;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+#mobileNavClose{
+    background-color: transparent;
+    position: absolute;
+    right: 20px;
+    top: -35px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+nav.mobileNavigation{
+    position: relative;
+    display: none;
+    z-index: 999;
+}
+nav.mobileNavigation ul{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+nav.mobileNavigation ul li{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    overflow: hidden;
+    margin-left: 0;
+    border-bottom: 1px solid gray;
+}
+nav.mobileNavigation ul li a{
+	font-weight: 600;
+	font-size: 16px;
+	letter-spacing: 4px;
+	color: white;
+}
+nav.mobileNavigation ul li.socialMobile a{
+	float: right;
+	padding-right: 10px;
+	color: #888;
+}
+nav.mobileNavigation ul li.socialMobile p{
+	float: left;
+	margin: 0;
+	padding-left: 10px;
+	color: #888;
+}
 /************************ HERO ***********************************/
 #hero{
 	text-align: center;
@@ -62,12 +134,13 @@ nav ul li{
 }
 #hero h1{
 	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
 	font-size: 120px;
 	color: #333;
 	letter-spacing: 1px;
 	margin: 0 0 20px 0;
 }
-#hero p{
+#hero .desktopSubTitle{
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 30px;
 	color: #333;
@@ -75,6 +148,13 @@ nav ul li{
 	line-height: 40px;
 	width: 50%;
 	margin: 60px auto 0;
+}
+#hero .mobileSubTitle{
+	display: none;
+	font-size: 18px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 800;
+	letter-spacing: 2px;
 }
 /*********************** FIRST SECTION ***************************/
 #firstBelowTheFold{
@@ -91,45 +171,61 @@ nav ul li{
 	text-align: center;
 	vertical-align: top;
 	padding: 150px 30px 80px;
-	background-color: rgb(251, 251, 251);
+	background-color: rgb(237, 237, 237);
 }
 #firstBelowTheFold ul li:nth-of-type(1){
 	background-image: url(img/triangle-white.png);
 	background-repeat: no-repeat;
 	background-size: 60%;
-	background-position: -200px center;
+	background-position: -100% center;
 }
 #firstBelowTheFold ul li:nth-of-type(2){
-	background-color: rgb(237, 237, 237);
+	background-color: rgba(207, 207, 207, 1);
 }
 #firstBelowTheFold ul li:nth-of-type(3){
 	background-image: url(img/square-white.png);
-	background-size: 100%;
 	background-repeat: no-repeat;
-	background-position: 250px 100px;
+	background-size: 100%;
+	background-position: right -200px top 200px;
 }
 #firstBelowTheFold h3{
+	font-weight: 600;
 	font-size: 24px; 
 	color: #333333;
 	letter-spacing: 4px;
 	line-height: 30px;
 }
+#firstBelowTheFold p{
+	color: #888;
+}
 /************************* POSLOVI *******************************/
+#poslovi{
+	margin-top: 100px;
+	padding-bottom: 100px;
+}
 .jobsTitle{
 	text-align: center;
 }
 .jobsTitle h2{
 	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
 	font-size: 60px;
 	color: #333;
 	letter-spacing: 3px;
 	line-height: 75px;
+	margin-top: 30px;
 }
 .jobsTitle p{
 	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
 	font-size: 36px;
 	color: #333333;
 	line-height: 50px;
+	width: 50%;
+	margin: 60px auto 0;
+}
+.pozicije{
+	padding: 50px 10%;
 }
 .pozicije h3{
 	font-family: 'Source Sans Pro', sans-serif;
@@ -141,9 +237,11 @@ nav ul li{
 }
 .pozicije p{
 	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
 	font-size: 24px;
 	color: #888;
 	line-height: 34px;
+	width: 60%;
 }
 .pozicije button{
 	clear: both;
@@ -151,6 +249,7 @@ nav ul li{
 }
 .pozicije ul li{
 	display: inline-block;
+	margin: 0 10px;
 }
 .pozicije ul li p{
 	font-family: 'Source Sans Pro', sans-serif;
@@ -160,16 +259,32 @@ nav ul li{
 	border: 1px solid #979797;
 	padding: 0 20px;
 }
+#poslovi div.pozicije:nth-of-type(even){
+	background-color: black;
+}
+#poslovi div.pozicije:nth-of-type(even) h3{
+	color: white;
+}
+#poslovi div.pozicije:nth-of-type(even) button{
+	color: white;
+}
+#poslovi div.pozicije:nth-of-type(even) ul li p{
+	color: white;
+}
 #ucitajJos{
 	margin: 0 auto;
 	display: block;
 }
-/***************************** O NAMA ******************************/
+/***************************** O NAMA *****************************/
 #oNama{
 	text-align: center;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-color: rgb(237, 237, 237);
 }
 #oNama h2{
 	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
 	font-size: 60px;
 	color: #333;
 	letter-spacing: 3px;
@@ -177,6 +292,17 @@ nav ul li{
 }
 #oNama p{
 	text-align: justify;
+	width: 50%;
+	margin: 50px auto;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	font-size: 18px;
+	color: #9B9B9B;
+	line-height: 28px;
+}
+#social{
+	text-align: center;
+	padding: 50px 0;
 }
 /****************************** FOOTER **************************/
 footer{
@@ -185,6 +311,8 @@ footer{
 footer ul{
 	display: flex;
 	justify-content: space-around;
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 footer ul li{
 	display: inline-block;
@@ -195,21 +323,331 @@ footer h4{
 	font-size: 18px;
 	color: #FFFFFF;
 	letter-spacing: 2px;
+	margin-bottom: 10px;
 }
 footer h4::before{
 	content: url(img/place-pin-ico.png);
 }
 footer p{
 	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
+	font-weight: 300;
 	font-size: 18px;
 	color: #9B9B9B;
 	line-height: 28px;
+	margin: 0;
 }
 #copywrite{
 	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
+	font-weight: 300;
 	font-size: 12px;
 	color: #5B5B5B;
 	letter-spacing: 2px;
+	background-color: #1A1A1A;
+	padding: 20px 0;
+}
+#copywrite p{
+	font-size: 12px;
+	margin-left: 10%;
+	color: #9B9B9B;
+}
+#copywrite ul{
+	display: block;
+	float: right;
+	padding: 0;
+	margin: 5px 10% 5px 5px;
+}
+#copywrite ul li a{
+	color: #9B9B9B;
+}
+/******************************************************************/
+/**************************** WIDTH 900px *************************/
+/******************************************************************/
+@media only screen and (max-width: 900px){
+	#hero h1{
+		font-size: 64px;
+	}
+	#hero .desktopSubTitle{
+		font-size: 24px;
+	}
+}
+/******************************************************************/
+/**************************** TABLET ******************************/
+/******************************************************************/
+@media only screen and (max-width: 640px){
+	nav{
+		padding-top: 15px;
+	}
+	nav img{
+		margin-left: 20px;
+	}
+	nav ul{
+		margin-right: 20px;
+	}
+	/************************** HERO ***************************/
+	#hero h1{
+		font-size: 30px;
+	}
+	#hero .mobileSubTitle{
+		display: block;
+	}
+	#hero .desktopSubTitle{
+		display: none;
+	}
+	/************************* FIRST SECTION ******************/
+	#firstBelowTheFold ul{
+		display: block;
+		margin: 0 auto;
+	}
+	#firstBelowTheFold ul li{
+		padding: 50px 0;
+		display: list-item;
+		width: 100%;
+	}
+	/************************* POSLOVI ************************/
+	.jobsTitle p{
+		font-size: 18px;
+		line-height: 18px;
+		margin: 30px auto;
+	}
+	.pozicije{
+		padding: 10px;
+	}
+	.pozicije p{
+		width: 100%;
+	}
+	.pozicije ul{
+		margin: 0;
+	}
+	.pozicije ul li{
+		margin: 5px;
+	}
+	.pozicije ul li p{
+		font-size: 12px;
+		padding: 2px 5px;
+	}
+	#poslovi div.pozicije:nth-of-type(odd){
+		background-color: rgb(237, 237, 237);
+	}
+	#poslovi div.pozicije:nth-of-type(even){
+		background-color: white;
+	}
+	#poslovi div.pozicije:nth-of-type(even) h3{
+		color: black;
+	}
+	#poslovi div.pozicije:nth-of-type(even) button{
+		color: black;
+	}
+	#poslovi div.pozicije:nth-of-type(even) ul li p{
+		color: #C41230;
+	}
+	#ucitajJos{
+		margin-top: 70px;
+		display: block;
+		font-weight: 700;
+	}
+	/*************************** O NAMA ************************/
+	#oNama p{
+		width: 90%;
+	}
+	/************************** FOOTER ************************/
+	footer ul{
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	footer ul li{
+		display: list-item;
+		list-style: none;
+		text-align: center;
+	}
+	#copywrite{
+		padding: 0;
+	}
+	#copywrite p{
+		text-align: center;
+		margin: 0;
+		background-color: #2D2D2D;
+		padding: 10px;
+	}
+	#copywrite span{
+		display: none;
+	}
+	#copywrite ul{
+		float: none;
+		margin: 0;
+		text-align: center;
+		padding: 10px;
+	}
+	#copywrite ul li{
+		display: inline-block;
+	}
+	#copywrite ul li a{
+		font-size: 16px;
+	}
+}
+/******************************************************************/
+/**************************** MOBILE ******************************/
+/******************************************************************/
+@media only screen and (max-width: 320px){
+	.dashRed{
+		border: 2px solid #C41230;
+		width: 40px;
+	}
+	/*************************** NAVIGATION ********************/
+	nav{
+		padding-top: 15px;
+	}
+	nav img{
+		margin-left: 20px;
+	}
+	.primaryNavigation{
+		display: none;
+	}
+	#mobileNavOpen{
+		display: block !important;
+	}
+	/************************** HERO ***************************/
+	#hero h1{
+		font-size: 30px;
+	}
+	#hero .mobileSubTitle{
+		display: block;
+	}
+	#hero .desktopSubTitle{
+		display: none;
+	}
+	/************************* FIRST SECTION ******************/
+	#firstBelowTheFold ul{
+		display: block;
+		margin: 0 auto;
+	}
+	#firstBelowTheFold ul li{
+		padding: 50px 0;
+		display: list-item;
+		width: 100%;
+	}
+	#firstBelowTheFold h3{
+		font-size: 12px;	
+	}
+	#firstBelowTheFold p{
+		font-size: 9px;
+	}
+	/************************* POSLOVI ************************/
+	.jobsTitle h2{
+		font-size: 20px;
+		line-height: 20px;
+	}
+	.jobsTitle p{
+		font-size: 11px;
+		line-height: 11px;
+		margin: 30px auto;
+	}
+	.pozicije{
+		padding: 10px;
+	}
+	.pozicije h3{
+		font-size: 8px;
+		margin: 0;
+		line-height: 8px;
+	}
+	.pozicije p{
+		font-size: 8px;
+		line-height: 8px;
+		width: 100%;
+		margin: 5px 0 0 0;
+    	overflow: hidden;
+    	text-overflow: ellipsis;
+    	white-space: nowrap;
+	}
+	.pozicije ul{
+		margin: 0;
+	}
+	.pozicije ul li{
+		margin: 0;
+	}
+	.pozicije ul li p{
+		font-size: 7px;
+		border: none;
+		padding: 0;
+	}
+	#poslovi div.pozicije:nth-of-type(odd){
+		background-color: rgb(237, 237, 237);
+	}
+	#poslovi div.pozicije:nth-of-type(even){
+		background-color: white;
+	}
+	#poslovi div.pozicije:nth-of-type(even) h3{
+		color: black;
+	}
+	#poslovi div.pozicije:nth-of-type(even) button{
+		color: black;
+	}
+	#poslovi div.pozicije:nth-of-type(even) ul li p{
+		color: #C41230;
+	}
+	.apply{
+		display: none;
+	}
+	#ucitajJos{
+		margin-top: 70px;
+		display: block;
+		width: 80%;
+		font-size: 14px;
+		font-weight: 700;
+	}
+	/*************************** O NAMA ************************/
+	#oNama h2{
+		font-size: 20px;
+		line-height: 20px;
+	}
+	#oNama p{
+		width: 90%;
+	}
+	/************************** FOOTER ************************/
+	footer ul{
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	footer ul li{
+		display: list-item;
+		list-style: none;
+		text-align: center;
+	}
+	footer h4{
+		font-size: 9px;
+	}
+	footer p{
+		font-size: 9px;
+		line-height: 12px;
+	}
+	#copywrite{
+		padding: 0;
+	}
+	#copywrite p{
+		font-size: 6px;
+		text-align: center;
+		margin: 0;
+		background-color: #2D2D2D;
+		padding: 10px;
+	}
+	#copywrite span{
+		display: none;
+	}
+	#copywrite ul{
+		float: none;
+		margin: 0;
+		text-align: center;
+		padding: 10px;
+	}
+	#copywrite ul li{
+		display: inline-block;
+	}
+	#copywrite ul li a{
+		font-size: 16px;
+	}
 }
